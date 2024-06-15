@@ -1,7 +1,14 @@
-import React from 'react'
+import React from "react";
+import { useState } from "react";
 
 export const UseState = () => {
-  return (
-    <div>UseState</div>
-  )
-}
+	const [count, setCount] = useState(0);
+  console.log("usestate render");
+	return (
+		<div>
+			<button onClick={() => setCount((prev) => prev + 1)}>
+				Count - {count}
+			</button>
+		</div>
+	);
+};
